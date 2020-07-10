@@ -15,9 +15,9 @@ public class TTTMinimaxBot {
 
 	char[][] makeMove(char[][] board) {
 
-		MinimaxMove[] possibleMoves = new MinimaxMove[8];
+		MinimaxMove[] possibleNextMoves = new MinimaxMove[9];
 		int highestPredictionScore = 0;
-		int movesCount = 0;
+		int nextMovesCount = 0;
 
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
@@ -29,13 +29,13 @@ public class TTTMinimaxBot {
 
 					if (currentPossibleMove.getScore() > highestPredictionScore) {
 						highestPredictionScore = currentPossibleMove.getScore();
-						movesCount = 1;
-						possibleMoves = new MinimaxMove[8];
-						possibleMoves[movesCount - 1] = currentPossibleMove;
+						nextMovesCount = 1;
+						possibleNextMoves = new MinimaxMove[8];
+						possibleNextMoves[nextMovesCount - 1] = currentPossibleMove;
 
 					} else if (currentPossibleMove.getScore() == highestPredictionScore) {
-						movesCount += 1;
-						possibleMoves[movesCount - 1] = currentPossibleMove;
+						nextMovesCount += 1;
+						possibleNextMoves[nextMovesCount - 1] = currentPossibleMove;
 
 					}
 
@@ -43,6 +43,6 @@ public class TTTMinimaxBot {
 			}
 		}
 
-		return possibleMoves[new Random().nextInt(movesCount)].getCurrentMove();
+		return possibleNextMoves[new Random().nextInt(nextMovesCount - 1)].getCurrentMove();
 	}
 }
