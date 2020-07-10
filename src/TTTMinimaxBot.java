@@ -2,15 +2,17 @@ import java.util.Random;
 
 public class TTTMinimaxBot {
 
-	char player;
+	char computerPlayer;
 	char opponent;
 	int predictionDepth;
 
-	TTTMinimaxBot(char player, char opponent, int predictionDepth) {
+	TTTMinimaxBot(char humanPlayer, char computerPlayer, int predictionDepth) {
 
-		this.player = player;
-		this.opponent = opponent;
+		this.computerPlayer = computerPlayer;
+		this.opponent = humanPlayer;
 		this.predictionDepth = predictionDepth;
+
+
 	}
 
 	char[][] makeMove(char[][] board) {
@@ -24,7 +26,8 @@ public class TTTMinimaxBot {
 
 				if (board[x][y] == ' ') {
 
-					MinimaxMove currentPossibleMove = new MinimaxMove(player, opponent, this.predictionDepth);
+
+					MinimaxMove currentPossibleMove = new MinimaxMove(computerPlayer, opponent, this.predictionDepth);
 					currentPossibleMove.MovePerdiction(board, x, y);
 
 					if (currentPossibleMove.getScore() > highestPredictionScore) {
@@ -43,6 +46,6 @@ public class TTTMinimaxBot {
 			}
 		}
 
-		return possibleNextMoves[new Random().nextInt(nextMovesCount - 1)].getCurrentMove();
+		return possibleNextMoves[new Random().nextInt(nextMovesCount)].getMove();
 	}
 }
