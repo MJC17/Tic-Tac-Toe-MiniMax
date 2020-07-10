@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05483eb1-588b-436a-b4ef-c61931f7ab2a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eMKOuqaOmpGqkCPtyyFlP4ZEyX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="TicTacToe" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TicTacToe" />
+      <module name="TicTacToe Game" />
+      <selectedOptions>
+        <option name="before.launch.openToolWindow" />
+        <option name="commandLineParameters" />
+        <option name="environmentVariables" />
+        <option name="jrePath" />
+        <option name="mainClass" />
+        <option name="module.classpath" />
+      </selectedOptions>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TicTacToe" />
+      <module name="TicTacToe Game" />
+      <selectedOptions>
+        <option name="before.launch.openToolWindow" />
+        <option name="commandLineParameters" />
+        <option name="environmentVariables" />
+        <option name="jrePath" />
+        <option name="mainClass" />
+        <option name="module.classpath" />
+      </selectedOptions>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="741" y="402" key="#Notifications" timestamp="1594345909330">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="741" y="402" key="#Notifications/0.23.1792.1097@0.23.1792.1097" timestamp="1594345909330" />
+    <state x="721" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594127112790">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="721" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594127112790" />
+    <state x="1157" y="285" key="#com.intellij.ide.util.MemberChooser" timestamp="1594128567054">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="1157" y="285" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1594128567054" />
+    <state x="994" y="368" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1594127046174">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="994" y="368" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594127046174" />
+    <state width="473" height="977" key="GridCell.Tab.0.bottom" timestamp="1594345859408">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="303" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1594333887555" />
+    <state width="473" height="977" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.0.1792.1120" timestamp="1594345859408" />
+    <state width="473" height="977" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1594345821732" />
+    <state width="473" height="977" key="GridCell.Tab.0.center" timestamp="1594345859392">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="473" height="977" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1594342922269" />
+    <state width="473" height="977" key="GridCell.Tab.0.center/0.23.1792.1097@0.0.1792.1120" timestamp="1594345859392" />
+    <state width="473" height="977" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1594345821732" />
+    <state width="473" height="977" key="GridCell.Tab.0.left" timestamp="1594345859391">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="303" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1594333887552" />
+    <state width="473" height="977" key="GridCell.Tab.0.left/0.23.1792.1097@0.0.1792.1120" timestamp="1594345859391" />
+    <state width="473" height="977" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1594345821731" />
+    <state width="473" height="977" key="GridCell.Tab.0.right" timestamp="1594345859408">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1750" height="303" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1594333887554" />
+    <state width="473" height="977" key="GridCell.Tab.0.right/0.23.1792.1097@0.0.1792.1120" timestamp="1594345859408" />
+    <state width="473" height="977" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1594345821732" />
+    <state width="854" height="374" key="GridCell.Tab.1.bottom" timestamp="1594170280850">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="854" height="374" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1594170280850" />
+    <state width="854" height="374" key="GridCell.Tab.1.center" timestamp="1594170280849">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="854" height="374" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1594170280849" />
+    <state width="854" height="374" key="GridCell.Tab.1.left" timestamp="1594170280849">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="854" height="374" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1594170280849" />
+    <state width="854" height="374" key="GridCell.Tab.1.right" timestamp="1594170280850">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="854" height="374" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1594170280850" />
+    <state x="604" y="321" key="IDE.errors.dialog" timestamp="1594341739783">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="604" y="321" key="IDE.errors.dialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594341739783" />
+    <state x="168" y="26" width="1521" height="722" key="SettingsEditor" timestamp="1594346081609">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="168" y="26" width="1521" height="722" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1594346081609" />
+    <state x="1225" y="422" key="cloudConfig.SelfSettingsDialog" timestamp="1594132748698">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="1225" y="422" key="cloudConfig.SelfSettingsDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594132748698" />
+    <state x="340" y="123" width="1352" height="897" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594345821889">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="340" y="123" width="1352" height="897" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594345821889" />
+    <state x="575" y="314" width="1009" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1594220628747">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="575" y="314" width="1009" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1792.1097@0.23.1792.1097" timestamp="1594220628747" />
+    <state x="818" y="327" key="extract.method.dialog" timestamp="1594343743590">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="818" y="327" key="extract.method.dialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594343743590" />
+    <state x="745" y="268" width="670" height="676" key="search.everywhere.popup" timestamp="1594222652268">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="745" y="268" width="670" height="676" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1594222652268" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TTTMinimaxBot.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TicTacToe_Game$TicTacToe.ic" NAME="TicTacToe Coverage Results" MODIFIED="1594166366494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
