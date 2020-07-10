@@ -19,10 +19,10 @@ public class MinimaxMove {
 
 	}
 
-	void MovePerdiction(char[][] currentBoard, int x, int y) {
+	void MovePerdiction(char[][] currentPossibleMove, int x, int y) {
 
 		System.out.println("new prediction move");
-		moveTesting(currentBoard, x, y, computerPlayer);
+		this.moveTesting(currentPossibleMove, x, y, computerPlayer);
 
 		if (isWinner(currentMove)) {
 
@@ -30,7 +30,9 @@ public class MinimaxMove {
 
 		} else if (predictionScore != 0) {
 
-//			opponentTurn(currentBoard);
+//			System.out.println(Arrays.deepToString(currentMove));
+			System.out.println("\nlevel 2");
+			opponentTurn(currentMove);
 
 		}
 	}
@@ -38,10 +40,10 @@ public class MinimaxMove {
 	void moveTesting(char[][] currentBoard, int x, int y, char currentPlayer) {
 
 		for (int i = 0; i < 3; i++) {
-			System.arraycopy(currentBoard[i], 0, currentMove[i], 0, 3);
+			System.arraycopy(currentBoard[i], 0, this.currentMove[i], 0, 3);
 		}
 
-		currentMove[x][y] = currentPlayer;
+		this.currentMove[x][y] = currentPlayer;
 
 	}
 
@@ -81,9 +83,6 @@ public class MinimaxMove {
 
 
 	void opponentTurn(char[][] testingBoard) {
-
-
-		System.out.println("\nlevel 2");
 
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
