@@ -72,7 +72,7 @@ public class TicTacToe extends JPanel {
 			}
 
 		} else {
-			bot = new TTTMinimaxBot(player1, player2, 4);
+			bot = new TTTMinimaxBot(player1, player2, 9);
 			currentPlayer = player1;
 		}
 

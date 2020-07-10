@@ -16,7 +16,10 @@ public class MinimaxMove {
 		this.predictionDepth = predictionDepth;
 		this.predictionScore = predictionDepth;
 
+	}
 
+	MinimaxMove() {
+		return;
 	}
 
 	void MovePerdiction(char[][] currentPossibleMove, int x, int y) {
@@ -26,14 +29,12 @@ public class MinimaxMove {
 
 		if (isWinner(currentMove)) {
 
-			predictionScore += 1;
+			this.predictionScore += 1;
 
 		} else if (predictionScore != 0) {
 
-//			System.out.println(Arrays.deepToString(currentMove));
-			System.out.println("\nlevel 2");
-			opponentTurn(currentMove);
-
+			this.predictionScore = opponentTurn(currentMove, this.predictionScore);
+			System.out.println(Arrays.deepToString(currentMove) + this.getScore());
 		}
 	}
 
@@ -47,10 +48,12 @@ public class MinimaxMove {
 
 	}
 
-	void playerTurn(char[][] testingBoard) {
+	int playerTurn(char[][] testingBoard, int score) {
 //		predictionScore -= 1;
 
-		System.out.println("level 3");
+//		System.out.println("\nlevel 3");
+
+		System.out.println(score);
 
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
@@ -58,58 +61,63 @@ public class MinimaxMove {
 				if (testingBoard[x][y] == ' ') {
 
 
-//					MinimaxMove currentTestingMove = new MinimaxMove('X', 'O', this.predictionDepth);
-//					currentTestingMove.moveTesting(testingBoard, x, y, 'x');
-//
-//
-//					if (isWinner(currentTestingMove.getCurrentMove())) {
-//
-//						predictionScore += 1;
-//
-//					} else if (predictionScore == 0) {
-////						playerTurn(currentTestingMove.getCurrentMove());
-//
-////						System.out.println(Arrays.deepToString(currentTestingMove.getCurrentMove()));
-//
-//					}
+					MinimaxMove currentTestingMove = new MinimaxMove();
+					currentTestingMove.moveTesting(testingBoard, x, y, computerPlayer);
+//					System.out.println(Arrays.deepToString(currentTestingMove.getMove()));
+
+
+					if (isWinner(currentTestingMove.getMove())) {
+
+						score += 1;
+
+					} else if (score >= 0) {
+
+						score -= 1;
+						return playerTurn(currentTestingMove.getMove(), score);
+
+					}
 
 
 				}
 			}
 		}
 
+		return score;
 
 	}
 
 
-	void opponentTurn(char[][] testingBoard) {
+	int opponentTurn(char[][] testingBoard, int score) {
+
+		//			System.out.println("\nlevel 2");
 
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
 
 				if (testingBoard[x][y] == ' ') {
 
-
-					MinimaxMove currentTestingMove = new MinimaxMove(opponent, computerPlayer, this.predictionDepth);
+					MinimaxMove currentTestingMove = new MinimaxMove();
 					currentTestingMove.moveTesting(testingBoard, x, y, opponent);
-					System.out.println(Arrays.deepToString(currentTestingMove.getMove()));
+//					System.out.println(Arrays.deepToString(currentTestingMove.getMove()));
 
 
-//					if (isWinner(currentTestingMove.getCurrentMove())) {
-//
-////						predictionScore = 0;
-//
-//					} else if (predictionScore >= 0) {
-////						playerTurn(currentTestingMove.getCurrentMove());
-//
-////						System.out.println(Arrays.deepToString(currentTestingMove.getCurrentMove()));
-//
-//					}
+					if (isWinner(currentTestingMove.getMove())) {
+
+						score = 0;
+						return score;
+
+					} else if (score >= 0) {
+						score -= 1;
+//						return score;
+						return playerTurn(currentTestingMove.getMove(), score);
+					}
 
 
 				}
 			}
 		}
+
+		return score;
 
 	}
 
