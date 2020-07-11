@@ -13,12 +13,13 @@ public class TTTMinimaxBot {
 		this.predictionDepth = predictionDepth;
 
 
+
 	}
 
 	char[][] makeMove(char[][] board) {
 
 		MinimaxMove[] possibleNextMoves = new MinimaxMove[9];
-		int highestPredictionScore = 0;
+		int highestPredictionScore = -1;
 		int nextMovesCount = 0;
 
 		for (int x = 0; x < 3; x++) {
@@ -27,8 +28,8 @@ public class TTTMinimaxBot {
 				if (board[x][y] == ' ') {
 
 
-					MinimaxMove currentPossibleMove = new MinimaxMove(computerPlayer, opponent, this.predictionDepth);
-					currentPossibleMove.MovePerdiction(board, x, y);
+					MinimaxMove currentPossibleMove = new MinimaxMove(computerPlayer, opponent);
+					currentPossibleMove.movePrediction(board, x, y, predictionDepth);
 
 					if (currentPossibleMove.getScore() > highestPredictionScore) {
 						highestPredictionScore = currentPossibleMove.getScore();

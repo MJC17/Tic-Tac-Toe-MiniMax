@@ -19,15 +19,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05483eb1-588b-436a-b4ef-c61931f7ab2a" name="Default Changelist" comment="Version with MiniMax Algorithm almost done (:">
+    <list default="true" id="05483eb1-588b-436a-b4ef-c61931f7ab2a" name="Default Changelist" comment="MiniMax Algorithm working for only one level of depth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/MinimaxMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/MinimaxMove.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/TTTMinimaxBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/TTTMinimaxBot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MinimaxMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MinimaxMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TTTMinimaxBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TTTMinimaxBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
@@ -47,6 +49,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/TTTMinimaxBot.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/MinimaxMove.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1eMKOuqaOmpGqkCPtyyFlP4ZEyX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -62,7 +68,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
   <component name="RunManager">
     <configuration name="TicTacToe" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -131,11 +137,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Working Version without  MiniMax Algorithm" />
     <MESSAGE value="Version with MiniMax Algorithm not fully working" />
     <MESSAGE value="Version with MiniMax Algorithm almost done (:" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version with MiniMax Algorithm almost done (:" />
+    <MESSAGE value="working MiniMax Algorithm but needs tweaking" />
+    <MESSAGE value="MiniMax Algorithm working for only one level of depth" />
+    <option name="LAST_COMMIT_MESSAGE" value="MiniMax Algorithm working for only one level of depth" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -157,34 +166,34 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="994" y="368" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594127046174" />
-    <state x="340" y="123" width="1352" height="897" key="DiffContextDialog" timestamp="1594387829388">
+    <state x="340" y="122" width="1352" height="897" key="DiffContextDialog" timestamp="1594398984796">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state x="340" y="123" width="1352" height="897" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594387829388" />
-    <state width="471" height="977" key="GridCell.Tab.0.bottom" timestamp="1594398486010">
+    <state x="340" y="122" width="1352" height="897" key="DiffContextDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594398984796" />
+    <state width="875" height="303" key="GridCell.Tab.0.bottom" timestamp="1594481954378">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state width="1750" height="303" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1594333887555" />
-    <state width="471" height="977" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.0.1792.1120" timestamp="1594394510888" />
-    <state width="471" height="977" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1594398486010" />
-    <state width="471" height="977" key="GridCell.Tab.0.center" timestamp="1594398486009">
+    <state width="471" height="646" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.0.1792.1120" timestamp="1594480480701" />
+    <state width="875" height="303" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1594481954378" />
+    <state width="875" height="303" key="GridCell.Tab.0.center" timestamp="1594481954377">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="473" height="977" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1594342922269" />
-    <state width="471" height="977" key="GridCell.Tab.0.center/0.23.1792.1097@0.0.1792.1120" timestamp="1594394510855" />
-    <state width="471" height="977" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1594398486009" />
-    <state width="471" height="977" key="GridCell.Tab.0.left" timestamp="1594398486009">
+    <state width="471" height="646" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1594480387354" />
+    <state width="471" height="646" key="GridCell.Tab.0.center/0.23.1792.1097@0.0.1792.1120" timestamp="1594480480700" />
+    <state width="875" height="303" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1594481954377" />
+    <state width="875" height="303" key="GridCell.Tab.0.left" timestamp="1594481954376">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="471" height="977" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1594394510835" />
+    <state width="471" height="646" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1594480480685" />
     <state width="473" height="977" key="GridCell.Tab.0.left/0.23.1792.1097@0.0.1792.1120" timestamp="1594345859391" />
-    <state width="471" height="977" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1594398486009" />
-    <state width="471" height="977" key="GridCell.Tab.0.right" timestamp="1594398486009">
+    <state width="875" height="303" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1594481954376" />
+    <state width="875" height="303" key="GridCell.Tab.0.right" timestamp="1594481954377">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state width="1750" height="303" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1594333887554" />
-    <state width="471" height="977" key="GridCell.Tab.0.right/0.23.1792.1097@0.0.1792.1120" timestamp="1594394510887" />
-    <state width="471" height="977" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1594398486009" />
+    <state width="471" height="646" key="GridCell.Tab.0.right/0.23.1792.1097@0.0.1792.1120" timestamp="1594480480700" />
+    <state width="875" height="303" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1594481954377" />
     <state width="854" height="374" key="GridCell.Tab.1.bottom" timestamp="1594170280850">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
@@ -205,10 +214,10 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="604" y="321" key="IDE.errors.dialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594341739783" />
-    <state x="168" y="26" width="1521" height="722" key="SettingsEditor" timestamp="1594398100982">
+    <state x="168" y="26" width="1521" height="722" key="SettingsEditor" timestamp="1594482566706">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state x="168" y="26" width="1521" height="722" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1594398100982" />
+    <state x="168" y="26" width="1521" height="722" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1594482566706" />
     <state x="616" y="311" key="Vcs.Push.Dialog.v2" timestamp="1594387293561">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
