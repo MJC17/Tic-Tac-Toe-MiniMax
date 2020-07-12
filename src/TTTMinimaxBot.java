@@ -22,6 +22,9 @@ public class TTTMinimaxBot {
 		int highestPredictionScore = -1;
 		int nextMovesCount = 0;
 
+		System.out.println("level 1");
+
+
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
 
@@ -46,6 +49,7 @@ public class TTTMinimaxBot {
 				}
 			}
 		}
+		System.out.println("");
 
 		return possibleNextMoves[new Random().nextInt(nextMovesCount)].getMove();
 	}
