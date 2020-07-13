@@ -14,6 +14,7 @@ public class TicTacToe extends JPanel {
 	int numMoves = 0;
 	int width = 510;
 	int height = 510;
+	String gameSatus;
 	boolean isTwoPlayer = false;
 	JButton resetBtn;
 	JLabel lbl;
@@ -35,7 +36,7 @@ public class TicTacToe extends JPanel {
 		this.add(resetBtn, BorderLayout.CENTER);
 
 		JFrame frame = new JFrame();
-		frame.setSize(width + 30, height + 80);
+		frame.setSize(width + 30, height + 85);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(this);
 		//    frame.add(resetBtn);
@@ -60,6 +61,8 @@ public class TicTacToe extends JPanel {
 	private void newGame() {
 
 		board = new char[][]{{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+		gameSatus = "";
+
 		numMoves = 0;
 
 		if (isTwoPlayer) {
@@ -92,10 +95,10 @@ public class TicTacToe extends JPanel {
 				this.paint(this.getGraphics());
 
 				if (isWinner() && numMoves <= 9) {
-					System.out.println(currentPlayer + " has won the game");
+					gameSatus = currentPlayer + " has won the game";
 
 				} else if (numMoves == 9) {
-					System.out.println("Tied game");
+					gameSatus = "Tied game";
 
 				} else {
 
@@ -111,10 +114,10 @@ public class TicTacToe extends JPanel {
 						numMoves += 1;
 
 						if (isWinner() && numMoves <= 9) {
-							System.out.println(currentPlayer + " has won the game");
+							gameSatus = currentPlayer + " has won the game";
 
 						} else if (numMoves == 9) {
-							System.out.println("Tied game");
+							gameSatus = "Tied game";
 
 						} else {
 							currentPlayer = player1;
@@ -132,14 +135,19 @@ public class TicTacToe extends JPanel {
 	}
 
 	private boolean isWinner() {
-
 		for (int i = 0; i < 3; i++) {
 			if ((((board[0][i] == board[1][i] && board[1][i] == board[2][i])) || (board[i][0] == board[i][1] && board[i][1] == board[i][2])) && board[i][i] != ' ') {
 				return true;
 			}
 		}
 
-		return ((board[0][0] == board[1][1] && board[1][1] == board[2][2]) || (board[0][2] == board[1][1] && board[1][1] == board[2][0])) && board[1][1] != ' ';
+		if ((board[0][0] == board[1][1] && board[1][1] == board[2][2]) && board[1][1] != ' ') {
+			return true;
+		} else if ((board[0][2] == board[1][1] && board[1][1] == board[2][0]) && board[1][1] != ' ') {
+			return true;
+		}
+
+		return false;
 	}
 
 	@Override
@@ -183,5 +191,8 @@ public class TicTacToe extends JPanel {
 				}
 			}
 		}
+
+		g.setFont(new Font("Helvetica", Font.BOLD, 20));
+		g.drawString(gameSatus.toUpperCase(), 10, 545);
 	}
 }

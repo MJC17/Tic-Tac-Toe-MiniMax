@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class MinimaxMove {
 
@@ -25,7 +25,7 @@ public class MinimaxMove {
 		moveTesting(currentPossibleMove, x, y, this.computerPlayer);
 
 		if (predictionDepth > 0) {
-			if (isWinner(this.currentMove) && predictionDepth >= 0) {
+			if (isWinner(this.currentMove)) {
 				this.predictionScore = 3;
 
 			} else if (canBlock(this.currentMove, x, y)) {
@@ -33,11 +33,11 @@ public class MinimaxMove {
 
 			} else {
 				this.predictionScore = opponentTurn(this.currentMove, predictionDepth - 1);
+
 			}
 		}
 
-		System.out.println(Arrays.deepToString(currentMove) + this.predictionScore);
-
+//		System.out.println(Arrays.deepToString(currentMove) + this.predictionScore);
 	}
 
 	void moveTesting(char[][] currentBoard, int x, int y, char currentPlayer) {
@@ -45,8 +45,8 @@ public class MinimaxMove {
 		for (int i = 0; i < 3; i++) {
 			System.arraycopy(currentBoard[i], 0, this.currentMove[i], 0, 3);
 		}
-		this.currentMove[x][y] = currentPlayer;
 
+		this.currentMove[x][y] = currentPlayer;
 	}
 
 	int playerTurn(char[][] testingBoard, int predictionDepth) {
@@ -58,7 +58,7 @@ public class MinimaxMove {
 
 				if (testingBoard[x][y] == ' ') {
 
-					int currentScore = 0;
+					int currentScore;
 
 					MinimaxMove currentTestingMove = new MinimaxMove();
 					currentTestingMove.moveTesting(testingBoard, x, y, computerPlayer);
@@ -76,15 +76,12 @@ public class MinimaxMove {
 		}
 
 		return highestScore;
-
-
 	}
 
 
 	int opponentTurn(char[][] testingBoard, int predictionDepth) {
 
 		int lowestScore = 0;
-//		System.out.println("\nLevel 2");
 
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
@@ -93,17 +90,13 @@ public class MinimaxMove {
 
 					int currentScore = 0;
 
-
 					MinimaxMove currentTestingMove = new MinimaxMove();
 					currentTestingMove.moveTesting(testingBoard, x, y, opponent);
 
-
 					if (isWinner(currentTestingMove.getMove())) {
-
 						currentScore = -1;
 
 					} else if (predictionDepth >= 0) {
-
 						currentScore = playerTurn(currentTestingMove.getMove(), predictionDepth - 1);
 
 					}
@@ -114,7 +107,6 @@ public class MinimaxMove {
 		}
 
 		return lowestScore;
-
 	}
 
 
@@ -123,20 +115,79 @@ public class MinimaxMove {
 		for (int i = 0; i < 3; i++) {
 			if ((((board[0][i] == board[1][i] && board[1][i] == board[2][i])) || (board[i][0] == board[i][1] && board[i][1] == board[i][2])) && board[i][i] != ' ') {
 				return true;
-
 			}
 		}
 
+		if ((board[0][0] == board[1][1] && board[1][1] == board[2][2]) && board[1][1] != ' ') {
+			return true;
+		} else if ((board[0][2] == board[1][1] && board[1][1] == board[2][0]) && board[1][1] != ' ') {
+			return true;
+		}
 
-		return ((board[0][0] == board[1][1] && board[1][1] == board[2][2]) ||
-		        (board[0][2] == board[1][1] && board[1][1] == board[2][0])) && board[1][1] != ' ';
+		return false;
 	}
 
 	private boolean canBlock(char[][] board, int moveX, int moveY) {
 
+		int xCount = 0;
+		for (int i = 0; i < 3; i++) {
+
+			if (board[moveX][i] == opponent) {
+				xCount += 1;
+			}
+
+			if (xCount == 2) {
+				return true;
+			}
+		}
+
+		xCount = 0;
+		for (int i = 0; i < 3; i++) {
+
+			if (board[i][moveY] == opponent) {
+				xCount += 1;
+			}
+
+			if (xCount == 2) {
+				return true;
+			}
+		}
+
+		if (moveX == moveY || (moveX == 0 && moveY == 2) || (moveX == 2 && moveY == 0)) {
+
+			xCount = 0;
+			int yCount = 0;
+
+			for (int i = 0; i < 3; i++) {
+
+				if (board[i][i] == opponent) {
+					xCount += 1;
+				} else if (board[i][i] == computerPlayer) {
+					yCount += 1;
+				}
+
+				if (xCount == 2 && yCount == 1) {
+					return true;
+				}
+			}
+
+			xCount = 0;
+			yCount = 0;
+			for (int i = 0; i < 3; i++) {
+
+				if (board[2 - i][i] == opponent) {
+					xCount += 1;
+				} else if (board[2 - i][i] == computerPlayer) {
+					yCount += 1;
+				}
+
+				if (xCount == 2 && yCount == 1) {
+					return true;
+				}
+			}
+		}
 
 		return false;
-
 	}
 
 
