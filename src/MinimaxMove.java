@@ -1,4 +1,4 @@
-//import java.util.Arrays;
+import java.util.Arrays;
 
 public class MinimaxMove {
 
@@ -37,7 +37,7 @@ public class MinimaxMove {
 			}
 		}
 
-//		System.out.println(Arrays.deepToString(currentMove) + this.predictionScore);
+		System.out.println(Arrays.deepToString(currentMove) + this.predictionScore);
 	}
 
 	void moveTesting(char[][] currentBoard, int x, int y, char currentPlayer) {
@@ -130,62 +130,69 @@ public class MinimaxMove {
 	private boolean canBlock(char[][] board, int moveX, int moveY) {
 
 		int xCount = 0;
+		int yCount = 0;
 		for (int i = 0; i < 3; i++) {
 
 			if (board[moveX][i] == opponent) {
 				xCount += 1;
+			} else if (board[moveX][i] == computerPlayer) {
+				yCount += 1;
 			}
 
-			if (xCount == 2) {
+			if (xCount == 2 && yCount == 1) {
 				return true;
 			}
 		}
 
 		xCount = 0;
+		yCount = 0;
 		for (int i = 0; i < 3; i++) {
 
 			if (board[i][moveY] == opponent) {
 				xCount += 1;
+			} else if (board[i][moveY] == computerPlayer) {
+				yCount += 1;
 			}
 
-			if (xCount == 2) {
+			if (xCount == 2 && yCount == 1) {
 				return true;
 			}
 		}
-
-		if (moveX == moveY || (moveX == 0 && moveY == 2) || (moveX == 2 && moveY == 0)) {
-
-			xCount = 0;
-			int yCount = 0;
-
-			for (int i = 0; i < 3; i++) {
-
-				if (board[i][i] == opponent) {
-					xCount += 1;
-				} else if (board[i][i] == computerPlayer) {
-					yCount += 1;
-				}
-
-				if (xCount == 2 && yCount == 1) {
-					return true;
-				}
-			}
-
-			xCount = 0;
-			yCount = 0;
-			for (int i = 0; i < 3; i++) {
-
-				if (board[2 - i][i] == opponent) {
-					xCount += 1;
-				} else if (board[2 - i][i] == computerPlayer) {
-					yCount += 1;
-				}
-
-				if (xCount == 2 && yCount == 1) {
-					return true;
-				}
-			}
-		}
+//
+//		TODO: fix crossing checker
+//		if (moveX == moveY || (moveX == 0 && moveY == 2) || (moveX == 2 && moveY == 0)) {
+//
+//			xCount = 0;
+//			yCount = 0;
+//
+//			for (int i = 0; i < 3; i++) {
+//
+//				if (board[i][i] == opponent) {
+//					xCount += 1;
+//				} else if (board[i][i] == computerPlayer) {
+//					yCount += 1;
+//				}
+//
+//				if (xCount == 2 && yCount == 1) {
+//					return true;
+//				}
+//			}
+//
+//			xCount = 0;
+//			yCount = 0;
+//			for (int i = 0; i < 3; i++) {
+//
+//				if (board[2 - i][i] == opponent) {
+//					xCount += 1;
+//				} else if (board[2 - i][i] == computerPlayer) {
+//					yCount += 1;
+//				}
+//
+//				if (xCount == 2 && yCount == 1) {
+//					return true;
+//				}
+//			}
+//		}
 
 		return false;
 	}

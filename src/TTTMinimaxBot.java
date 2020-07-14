@@ -44,6 +44,7 @@ public class TTTMinimaxBot {
 			}
 		}
 
+		System.out.println();
 		return possibleNextMoves[new Random().nextInt(nextMovesCount)].getMove();
 	}
 }
