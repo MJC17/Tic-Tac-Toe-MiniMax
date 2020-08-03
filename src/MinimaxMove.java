@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class MinimaxMove {
 
 	private final char[][] currentMove = new char[3][3];
@@ -37,7 +35,7 @@ public class MinimaxMove {
 			}
 		}
 
-		System.out.println(Arrays.deepToString(currentMove) + this.predictionScore);
+//		System.out.println(Arrays.deepToString(currentMove) + this.predictionScore);
 	}
 
 	void moveTesting(char[][] currentBoard, int x, int y, char currentPlayer) {

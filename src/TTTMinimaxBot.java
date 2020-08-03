@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class TTTMinimaxBot {
 
-	char computerPlayer;
-	char opponent;
-	int predictionDepth;
+	private final char computerPlayer;
+	private final char opponent;
+	private final int predictionDepth;
 
 	TTTMinimaxBot(char humanPlayer, char computerPlayer, int predictionDepth) {
 
@@ -44,7 +44,6 @@ public class TTTMinimaxBot {
 			}
 		}
 
-		System.out.println();
 		return possibleNextMoves[new Random().nextInt(nextMovesCount)].getMove();
 	}
 }

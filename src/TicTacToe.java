@@ -3,81 +3,72 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.Random;
+
 
 public class TicTacToe extends JPanel {
 
-	char[][] board = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+	char[][] board;
 	char currentPlayer;
 	char player1 = 'X';
 	char player2 = 'O';
 	int numMoves = 0;
 	int width = 510;
 	int height = 510;
-	String gameSatus;
-	boolean isTwoPlayer = false;
+	String gameStatus;
 	JButton resetBtn;
-	JLabel lbl;
 	TTTMinimaxBot bot;
 
 	private TicTacToe() {
 
-		resetBtn = new JButton("Reset Game");
-		resetBtn.setPreferredSize(new Dimension(200, 40));
-		//    resetBtn.tran
-		resetBtn.setAction(
-				new AbstractAction() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						newGame();
-					}
-				});
-
-		this.add(resetBtn, BorderLayout.CENTER);
+		setLayout(new GridLayout(2, 1));
 
 		JFrame frame = new JFrame();
-		frame.setSize(width + 30, height + 85);
+		frame.setSize(width + 30, height + 90);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(this);
-		//    frame.add(resetBtn);
-		frame.setTitle("TicTacToe Game");
+		frame.setTitle("TicTacToe Game with Minimax and Blocking Algroithm");
 		frame.setVisible(true);
+		frame.setResizable(false);
 		frame.addMouseListener(
 				new MouseAdapter() {
 					@Override
 					public void mousePressed(MouseEvent e) {
 						super.mousePressed(e);
-						playerMove(e.getLocationOnScreen());
+						playerMove(e.getPoint());
 					}
 				});
+
+		resetBtn = new JButton();
+		resetBtn.setBounds(290, 530, 235, 40);
+		resetBtn.setAction(new AbstractAction() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				newGame();
+			}
+		});
+		resetBtn.setText("Reset Game");
+		resetBtn.setFont(new Font("Helvetica", Font.BOLD, 20));
+		resetBtn.setBorderPainted(true);
+		resetBtn.setFocusPainted(false);
+		add(resetBtn);
 
 		newGame();
 	}
 
 	public static void main(String[] args) {
-		new TicTacToe();
+		new TicTacToe(); // starting the game
 	}
+
 
 	private void newGame() {
 
+		// init the new game (resetting the board/game)
 		board = new char[][]{{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
-		gameSatus = "";
-
+		gameStatus = null;
 		numMoves = 0;
 
-		if (isTwoPlayer) {
-
-			if (new Random().nextBoolean()) {
-				currentPlayer = player1;
-
-			} else {
-				currentPlayer = player2;
-			}
-
-		} else {
-			bot = new TTTMinimaxBot(player1, player2, 2);
-			currentPlayer = player1;
-		}
+		bot = new TTTMinimaxBot(player1, player2, 2);
+		currentPlayer = player1;
 
 		paint(getGraphics());
 	}
@@ -89,41 +80,17 @@ public class TicTacToe extends JPanel {
 
 		try {
 
-			if (board[x][y] == ' ' && !isWinner()) {
+			if (board[x][y] == ' ' && gameStatus == null) {
+				currentPlayer = player1;
 				numMoves += 1;
 				board[x][y] = currentPlayer;
-				this.paint(this.getGraphics());
+				checkGameStatus();
 
-				if (isWinner() && numMoves <= 9) {
-					gameSatus = currentPlayer + " has won the game";
-
-				} else if (numMoves == 9) {
-					gameSatus = "Tied game";
-
-				} else {
-
-					if (currentPlayer == player1 && isTwoPlayer) {
-						currentPlayer = player2;
-
-					} else if (currentPlayer == player2 && isTwoPlayer) {
-						currentPlayer = player1;
-
-					} else if (currentPlayer == player1 && !isTwoPlayer) {
-						currentPlayer = player2;
-						board = bot.makeMove(board);
-						numMoves += 1;
-
-						if (isWinner() && numMoves <= 9) {
-							gameSatus = currentPlayer + " has won the game";
-
-						} else if (numMoves == 9) {
-							gameSatus = "Tied game";
-
-						} else {
-							currentPlayer = player1;
-
-						}
-					}
+				if (gameStatus == null) {
+					board = bot.makeMove(board);
+					currentPlayer = player2;
+					numMoves += 1;
+					checkGameStatus();
 				}
 			}
 
@@ -133,6 +100,19 @@ public class TicTacToe extends JPanel {
 
 		paint(getGraphics());
 	}
+
+	void checkGameStatus() {
+
+		if (isWinner()) {
+			gameStatus = currentPlayer + " is the winner";
+
+		} else if (numMoves == 9) {
+			gameStatus = "tied Game";
+		} else {
+			gameStatus = null;
+		}
+	}
+
 
 	private boolean isWinner() {
 		for (int i = 0; i < 3; i++) {
@@ -168,31 +148,39 @@ public class TicTacToe extends JPanel {
 
 				g2.setStroke(new BasicStroke(10));
 
-				if (board[x][y] == player1) {
+				try {
+					if (board[x][y] == player1) {
 
-					g.drawLine(
-							x * (width / 3) + 40,
-							y * (height / 3) + 40,
-							x * (width / 3) - 40 + (width / 3),
-							y * (height / 3) - 40 + (height / 3));
-					g.drawLine(
-							x * (width / 3) + 40,
-							y * (height / 3) - 40 + (height / 3),
-							x * (width / 3) - 40 + (width / 3),
-							y * (height / 3) + 40);
+						g2.drawLine(
+								x * (width / 3) + 40,
+								y * (height / 3) + 40,
+								x * (width / 3) - 40 + (width / 3),
+								y * (height / 3) - 40 + (height / 3));
+						g2.drawLine(
+								x * (width / 3) + 40,
+								y * (height / 3) - 40 + (height / 3),
+								x * (width / 3) - 40 + (width / 3),
+								y * (height / 3) + 40);
 
-				} else if (board[x][y] == player2) {
+					} else if (board[x][y] == player2) {
 
-					g.drawOval(
-							x * (width / 3) + 20,
-							y * (height / 3) + 20,
-							width / 3 - 40,
-							height / 3 - 40);
+						g2.drawOval(
+								x * (width / 3) + 20,
+								y * (height / 3) + 20,
+								width / 3 - 40,
+								height / 3 - 40);
+					}
+				} catch (NullPointerException ignored) {
+					return;
 				}
 			}
 		}
 
-		g.setFont(new Font("Helvetica", Font.BOLD, 20));
-		g.drawString(gameSatus.toUpperCase(), 10, 545);
+		try {
+			g.setFont(new Font("Helvetica", Font.BOLD, 20));
+			g.drawString(gameStatus.toUpperCase(), 10, 545);
+		} catch (NullPointerException ignored) {
+			return;
+		}
 	}
 }
