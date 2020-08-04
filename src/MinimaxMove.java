@@ -202,7 +202,7 @@ public class MinimaxMove {
 	}
 
 
-	public int getScore() {
+	public int getScore() { // get the moves prediction score
 		return predictionScore;
 	}
 
