@@ -1,37 +1,33 @@
 public class MinimaxMove {
 
 	private final char[][] currentMove = new char[3][3];
-
 	char computerPlayer;
 	char opponent;
 	private int predictionScore = 0;
 
 	MinimaxMove(char computerPlayer, char humanPlayer) {
 
+		// init variables
 		this.computerPlayer = computerPlayer;
 		this.opponent = humanPlayer;
 		this.predictionScore = 0;
-
 	}
 
 
-	MinimaxMove() {
-	}
+	MinimaxMove() { } // init the class
 
 	void movePrediction(char[][] currentPossibleMove, int x, int y, int predictionDepth) {
+		// making perdiction of the move based on the current board
 
 		moveTesting(currentPossibleMove, x, y, this.computerPlayer);
 
 		if (predictionDepth > 0) {
 			if (isWinner(this.currentMove)) {
 				this.predictionScore = 3;
-
 			} else if (canBlock(this.currentMove, x, y)) {
 				this.predictionScore = 2;
-
 			} else {
 				this.predictionScore = opponentTurn(this.currentMove, predictionDepth - 1);
-
 			}
 		}
 
@@ -63,7 +59,6 @@ public class MinimaxMove {
 
 					if (isWinner(currentTestingMove.getMove()) && predictionDepth >= 0) {
 						currentScore = 1;
-
 					} else {
 						currentScore = opponentTurn(currentTestingMove.getMove(), predictionDepth - 1);
 					}
@@ -92,11 +87,9 @@ public class MinimaxMove {
 					currentTestingMove.moveTesting(testingBoard, x, y, opponent);
 
 					if (isWinner(currentTestingMove.getMove())) {
-						currentScore = -1;
-
+						currentScore = - 1;
 					} else if (predictionDepth >= 0) {
 						currentScore = playerTurn(currentTestingMove.getMove(), predictionDepth - 1);
-
 					}
 
 					lowestScore = Math.max(currentScore, lowestScore);
@@ -156,8 +149,7 @@ public class MinimaxMove {
 				return true;
 			}
 		}
-//
-//		TODO: fix crossing checker
+
 		if (moveX == moveY) {
 
 			xCount = 0;
@@ -194,19 +186,17 @@ public class MinimaxMove {
 					return true;
 				}
 			}
-
-
 		}
 
 		return false;
 	}
 
 
-	public int getScore() {
+	public int getScore() { // get the moves prediction score
 		return predictionScore;
 	}
 
-	public char[][] getMove() {
+	public char[][] getMove() { // getting the move that was scored
 		return currentMove;
 	}
 }
