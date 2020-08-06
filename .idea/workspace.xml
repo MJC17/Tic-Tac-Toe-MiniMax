@@ -30,14 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05483eb1-588b-436a-b4ef-c61931f7ab2a" name="Default Changelist" comment="Comment all through out code... making it easier to understand&#10;&#10;Signed-off-by: MJC17 &lt;marcus17cameron@gmail.com&gt;">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/MinimaxMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/MinimaxMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/TTTMinimaxBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/TTTMinimaxBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe Game/TicTacToe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MinimaxMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MinimaxMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
