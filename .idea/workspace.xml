@@ -29,10 +29,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05483eb1-588b-436a-b4ef-c61931f7ab2a" name="Default Changelist" comment="Comment all through out code... making it easier to understand&#10;&#10;Signed-off-by: MJC17 &lt;marcus17cameron@gmail.com&gt;">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="05483eb1-588b-436a-b4ef-c61931f7ab2a" name="Default Changelist" comment="Adding Gitignore file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="false" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,10 +48,10 @@
         <option value="Marcus Cameron" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="SIGN_OFF_COMMIT" value="true" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/MinimaxMove.java" root0="FORCE_HIGHLIGHTING" />
@@ -163,7 +160,8 @@
     <MESSAGE value="simplified code&#10;&#10;Signed-off-by: MJC17 &lt;marcus17cameron@gmail.com&gt;" />
     <MESSAGE value="Simplified code&#10;&#10;Signed-off-by: MJC17 &lt;marcus17cameron@gmail.com&gt;" />
     <MESSAGE value="Comment all through out code... making it easier to understand&#10;&#10;Signed-off-by: MJC17 &lt;marcus17cameron@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment all through out code... making it easier to understand&#10;&#10;Signed-off-by: MJC17 &lt;marcus17cameron@gmail.com&gt;" />
+    <MESSAGE value="Adding Gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Gitignore file" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -253,18 +251,26 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="604" y="321" key="IDE.errors.dialog/0.23.1792.1097@0.23.1792.1097" timestamp="1594341739783" />
+    <state x="384" y="118" key="MergeDialog" timestamp="1596725465458">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="384" y="118" key="MergeDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1596725465458" />
+    <state x="843" y="320" key="MultipleFileMergeDialog" timestamp="1596725470410">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="843" y="320" key="MultipleFileMergeDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1596725470410" />
     <state x="173" y="199" width="1538" height="722" key="SettingsEditor" timestamp="1596564104775">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="173" y="199" width="1538" height="722" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1596564104775" />
     <state x="168" y="26" width="1521" height="722" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1594571019821" />
     <state x="185" y="211" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1595864582610" />
-    <state x="616" y="294" key="Vcs.Push.Dialog.v2" timestamp="1596507328184">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="660" y="300" key="Vcs.Push.Dialog.v2" timestamp="1596725434055">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="616" y="294" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1596507328184" />
     <state x="616" y="311" key="Vcs.Push.Dialog.v2/0.23.1792.1097@0.23.1792.1097" timestamp="1594387293560" />
-    <state x="660" y="300" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1596468004187" />
+    <state x="660" y="300" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1596725434055" />
     <state x="1225" y="422" key="cloudConfig.SelfSettingsDialog" timestamp="1594132748698">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
